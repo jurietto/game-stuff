@@ -26,24 +26,24 @@ roughness = 0.82
 
 [sub_resource type="BoxMesh" id="BoxMesh_3"]
 material = SubResource("Mat_wall")
-size = Vector3(10.9, 4, 0.4)
+size = Vector3(10.55, 4, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3"]
-size = Vector3(10.9, 4, 0.4)
+size = Vector3(10.55, 4, 0.4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4"]
 material = SubResource("Mat_wall")
-size = Vector3(10.9, 4, 0.4)
+size = Vector3(10.55, 4, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4"]
-size = Vector3(10.9, 4, 0.4)
+size = Vector3(10.55, 4, 0.4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5"]
 material = SubResource("Mat_wall")
-size = Vector3(3.2, 1, 0.4)
+size = Vector3(3.9, 1, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5"]
-size = Vector3(3.2, 1, 0.4)
+size = Vector3(3.9, 1, 0.4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6"]
 material = SubResource("Mat_wall")
@@ -67,12 +67,12 @@ size = Vector3(0.4, 4, 24.2)
 size = Vector3(0.4, 4, 24.2)
 
 [sub_resource type="StandardMaterial3D" id="Mat_door"]
-albedo_color = Color(0.3, 0.16, 0.07, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.82
 
 [sub_resource type="BoxMesh" id="BoxMesh_9"]
 material = SubResource("Mat_door")
-size = Vector3(3.2, 3, 0.4)
+size = Vector3(3.6, 3, 0.08)
 
 [sub_resource type="BoxMesh" id="BoxMesh_10"]
 material = SubResource("Mat_floor")
@@ -448,6 +448,24 @@ size = Vector3(0.4, 2.3, 24.2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_69"]
 size = Vector3(0.4, 2.3, 24.2)
 
+[sub_resource type="StandardMaterial3D" id="Mat_roof"]
+albedo_color = Color(0.08, 0.075, 0.07, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_70"]
+material = SubResource("Mat_roof")
+size = Vector3(13.4, 0.35, 27)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70"]
+size = Vector3(13.4, 0.35, 27)
+
+[sub_resource type="BoxMesh" id="BoxMesh_71"]
+material = SubResource("Mat_roof")
+size = Vector3(0.5, 0.35, 27.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71"]
+size = Vector3(0.5, 0.35, 27.2)
+
 [sub_resource type="StandardMaterial3D" id="Mat_grass"]
 albedo_color = Color(0.18, 0.55, 0.18, 1)
 roughness = 0.82
@@ -486,7 +504,7 @@ mesh = SubResource("BoxMesh_2")
 shape = SubResource("BoxShape3D_2")
 
 [node name="FrontWall_Lower_Left_DoorAligned" type="MeshInstance3D" parent="House" unique_id=1651872514]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05, 2.3, 12.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.225, 2.3, 12.3)
 mesh = SubResource("BoxMesh_3")
 
 [node name="FrontWall_Lower_Left_DoorAligned_StaticBody" type="StaticBody3D" parent="House/FrontWall_Lower_Left_DoorAligned" unique_id=2044801755]
@@ -495,7 +513,7 @@ mesh = SubResource("BoxMesh_3")
 shape = SubResource("BoxShape3D_3")
 
 [node name="FrontWall_Lower_Right_DoorAligned" type="MeshInstance3D" parent="House" unique_id=1566193926]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05, 2.3, 12.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.225, 2.3, 12.3)
 mesh = SubResource("BoxMesh_4")
 
 [node name="FrontWall_Lower_Right_DoorAligned_StaticBody" type="StaticBody3D" parent="House/FrontWall_Lower_Right_DoorAligned" unique_id=1397799425]
@@ -1022,6 +1040,33 @@ mesh = SubResource("BoxMesh_69")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Attic_Right_KneeWall/Attic_Right_KneeWall_StaticBody" unique_id=499274855]
 shape = SubResource("BoxShape3D_69")
+
+[node name="ThirdFloor_Roof_LeftSlope_CleanGable" type="MeshInstance3D" parent="House"]
+transform = Transform3D(0.98574, 0.16827, 0, -0.16827, 0.98574, 0, 0, 0, 1, -6.45, 12.05, 0)
+mesh = SubResource("BoxMesh_70")
+
+[node name="ThirdFloor_Roof_LeftSlope_CleanGable_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_Roof_LeftSlope_CleanGable"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/ThirdFloor_Roof_LeftSlope_CleanGable/ThirdFloor_Roof_LeftSlope_CleanGable_StaticBody"]
+shape = SubResource("BoxShape3D_70")
+
+[node name="ThirdFloor_Roof_RightSlope_CleanGable" type="MeshInstance3D" parent="House"]
+transform = Transform3D(0.98574, -0.16827, 0, 0.16827, 0.98574, 0, 0, 0, 1, 6.45, 12.05, 0)
+mesh = SubResource("BoxMesh_70")
+
+[node name="ThirdFloor_Roof_RightSlope_CleanGable_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_Roof_RightSlope_CleanGable"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/ThirdFloor_Roof_RightSlope_CleanGable/ThirdFloor_Roof_RightSlope_CleanGable_StaticBody"]
+shape = SubResource("BoxShape3D_70")
+
+[node name="ThirdFloor_Roof_RidgeCap_CleanGable" type="MeshInstance3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.18, 0)
+mesh = SubResource("BoxMesh_71")
+
+[node name="ThirdFloor_Roof_RidgeCap_CleanGable_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_Roof_RidgeCap_CleanGable"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/ThirdFloor_Roof_RidgeCap_CleanGable/ThirdFloor_Roof_RidgeCap_CleanGable_StaticBody"]
+shape = SubResource("BoxShape3D_71")
 
 [node name="GrassPlane_100x100" type="MeshInstance3D" parent="." unique_id=1300898881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04, 0)
