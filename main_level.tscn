@@ -72,7 +72,7 @@ roughness = 0.82
 
 [sub_resource type="BoxMesh" id="BoxMesh_9"]
 material = SubResource("Mat_door")
-size = Vector3(3.6, 3, 0.08)
+size = Vector3(3.9, 3, 0.4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_10"]
 material = SubResource("Mat_floor")
@@ -778,7 +778,7 @@ mesh = SubResource("BoxMesh_33")
 shape = SubResource("BoxShape3D_33")
 
 [node name="FirstToSecond_RampCollision_ExactStairWidth_3p2" type="StaticBody3D" parent="House" unique_id=1313218666]
-transform = Transform3D(1, 0, 0, 0, 0.8984739, 0.439027, 0, -0.439027, 0.8984739, -7.8, 2.45, 2.3)
+transform = Transform3D(1, 0, 0, 0, 0.8984739, -0.439027, 0, 0.439027, 0.8984739, -7.8, 2.45, 2.3)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/FirstToSecond_RampCollision_ExactStairWidth_3p2" unique_id=259754518]
 shape = SubResource("BoxShape3D_36")
@@ -1000,7 +1000,7 @@ mesh = SubResource("BoxMesh_64")
 shape = SubResource("BoxShape3D_64")
 
 [node name="SecondToThird_RampCollision_ExactStairWidth_3p2" type="StaticBody3D" parent="House" unique_id=1349820029]
-transform = Transform3D(1, 0, 0, 0, 0.9103665, 0.4138029, 0, -0.4138029, 0.9103665, 6.4, 6.6, -2.8)
+transform = Transform3D(1, 0, 0, 0, 0.9103665, -0.4138029, 0, 0.4138029, 0.9103665, 6.4, 6.6, -2.8)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/SecondToThird_RampCollision_ExactStairWidth_3p2" unique_id=121621868]
 shape = SubResource("BoxShape3D_65")
@@ -1042,7 +1042,7 @@ mesh = SubResource("BoxMesh_69")
 shape = SubResource("BoxShape3D_69")
 
 [node name="ThirdFloor_Roof_LeftSlope_CleanGable" type="MeshInstance3D" parent="House"]
-transform = Transform3D(0.98574, 0.16827, 0, -0.16827, 0.98574, 0, 0, 0, 1, -6.45, 12.05, 0)
+transform = Transform3D(0.98574, -0.16827, 0, 0.16827, 0.98574, 0, 0, 0, 1, -6.45, 12.05, 0)
 mesh = SubResource("BoxMesh_70")
 
 [node name="ThirdFloor_Roof_LeftSlope_CleanGable_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_Roof_LeftSlope_CleanGable"]
@@ -1051,7 +1051,7 @@ mesh = SubResource("BoxMesh_70")
 shape = SubResource("BoxShape3D_70")
 
 [node name="ThirdFloor_Roof_RightSlope_CleanGable" type="MeshInstance3D" parent="House"]
-transform = Transform3D(0.98574, -0.16827, 0, 0.16827, 0.98574, 0, 0, 0, 1, 6.45, 12.05, 0)
+transform = Transform3D(0.98574, 0.16827, 0, -0.16827, 0.98574, 0, 0, 0, 1, 6.45, 12.05, 0)
 mesh = SubResource("BoxMesh_70")
 
 [node name="ThirdFloor_Roof_RightSlope_CleanGable_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_Roof_RightSlope_CleanGable"]
