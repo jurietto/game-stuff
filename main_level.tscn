@@ -67,7 +67,7 @@ size = Vector3(0.4, 4, 24.2)
 size = Vector3(0.4, 4, 24.2)
 
 [sub_resource type="StandardMaterial3D" id="Mat_door"]
-albedo_color = Color(0.3, 0.16, 0.07, 1)
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.82
 
 [sub_resource type="BoxMesh" id="BoxMesh_9"]
@@ -447,6 +447,24 @@ size = Vector3(0.4, 2.3, 24.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_69"]
 size = Vector3(0.4, 2.3, 24.2)
+
+[sub_resource type="StandardMaterial3D" id="Mat_roof"]
+albedo_color = Color(0.08, 0.075, 0.07, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_70"]
+material = SubResource("Mat_roof")
+size = Vector3(14.5, 0.35, 27)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70"]
+size = Vector3(14.5, 0.35, 27)
+
+[sub_resource type="BoxMesh" id="BoxMesh_71"]
+material = SubResource("Mat_roof")
+size = Vector3(14.5, 0.35, 27)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71"]
+size = Vector3(14.5, 0.35, 27)
 
 [sub_resource type="StandardMaterial3D" id="Mat_grass"]
 albedo_color = Color(0.18, 0.55, 0.18, 1)
@@ -1022,6 +1040,24 @@ mesh = SubResource("BoxMesh_69")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Attic_Right_KneeWall/Attic_Right_KneeWall_StaticBody" unique_id=499274855]
 shape = SubResource("BoxShape3D_69")
+
+[node name="ThirdFloor_LeftRoofSlope" type="MeshInstance3D" parent="House"]
+transform = Transform3D(0.92718385, 0.3746066, 0, -0.3746066, 0.92718385, 0, 0, 0, 1, -5.9, 11.9, 0)
+mesh = SubResource("BoxMesh_70")
+
+[node name="ThirdFloor_LeftRoofSlope_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_LeftRoofSlope"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/ThirdFloor_LeftRoofSlope/ThirdFloor_LeftRoofSlope_StaticBody"]
+shape = SubResource("BoxShape3D_70")
+
+[node name="ThirdFloor_RightRoofSlope" type="MeshInstance3D" parent="House"]
+transform = Transform3D(0.92718385, -0.3746066, 0, 0.3746066, 0.92718385, 0, 0, 0, 1, 5.9, 11.9, 0)
+mesh = SubResource("BoxMesh_71")
+
+[node name="ThirdFloor_RightRoofSlope_StaticBody" type="StaticBody3D" parent="House/ThirdFloor_RightRoofSlope"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/ThirdFloor_RightRoofSlope/ThirdFloor_RightRoofSlope_StaticBody"]
+shape = SubResource("BoxShape3D_71")
 
 [node name="GrassPlane_100x100" type="MeshInstance3D" parent="." unique_id=1300898881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04, 0)
